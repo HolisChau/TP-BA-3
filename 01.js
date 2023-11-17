@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     propiedadesDesc[index].classList.add("mostrar");
 
     // Verificar si la pantalla es pequeña
-    if (window.innerWidth <= 380) {
+    if (window.innerWidth <= 500) {
       const propiedadDesc = propiedadesDesc[index].innerHTML;
 
       const popupContainer = document.createElement("div");
