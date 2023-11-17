@@ -209,7 +209,7 @@ footer h5 {
   }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 500px) {
   #Nombre_Propiedades {
     width: 100%;
   }
