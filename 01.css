@@ -1,0 +1,257 @@
+header,
+body,
+main,
+footer,
+nav {
+  margin: 0;
+}
+
+h1,
+h2,
+ul,
+li,
+p,
+h5 {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+#titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgreen;
+  color: aliceblue;
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+h1 {
+  box-sizing: border-box;
+  margin: 15px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid;
+}
+
+#Presentacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5px;
+  width: 100%;
+  height: 50%;
+  padding: 5px;
+  background-color: darkseagreen;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+
+#Presentacion section {
+  text-align: center;
+  background-color: black;
+  color: aliceblue;
+  margin-top: 5px;
+  width: 80%;
+  height: 40%;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#Explicacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5px;
+  width: 100%;
+  height: 50%;
+  padding: 10px;
+  background-color: darkseagreen;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+
+#Explicacion section {
+  text-align: center;
+  background-color: black;
+  color: aliceblue;
+  margin: 10px auto;
+  width: 80%;
+  height: 40%;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#Propiedades {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: darkseagreen;
+  width: 90%;
+  height: 500px;
+  border-radius: 30px 30px 30px 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#Nombre_Propiedades {
+  width: 30%;
+  height: 100%;
+}
+
+#Nombre_Propiedades div {
+  margin: 15px 5px;
+  border-radius: 10px;
+  background-color: darkgreen;
+  color: aliceblue;
+  padding: 5px;
+}
+
+#Nombre_Propiedades div:hover {
+  background-color: aquamarine;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#Descripcion_prop {
+  background-color: black;
+  border-radius: 15px 15px;
+  color: aliceblue;
+  margin: 15px 15px;
+  width: 60%;
+  height: 95%;
+  position: relative; /* Agrega posición relativa al contenedor principal */
+}
+
+article {
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+article div {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+article div ul {
+  flex: 1;
+}
+
+article div img {
+  min-width: 250px;
+  background-color: bisque;
+  margin-left: 15px;
+  float: right;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  flex: 1; /* Que la imagen ocupe todo el espacio disponible */
+  max-width: 100%; /* Agrega esta línea para que la imagen no sobrepase su contenedor */
+}
+
+#Descripcion_prop .propiedad_desc {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#Descripcion_prop .propiedad_desc.mostrar {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: darkgreen;
+  height: 5%;
+}
+footer h5 {
+  display: inline;
+  color: aliceblue;
+  padding: 5px;
+}
+@media screen and (max-width: 900px) {
+  article div {
+    flex-direction: column; /* Cambia la dirección a columna */
+  }
+
+  article div img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+    float: none; /* Elimina el flotado */
+    margin: 0; /* Elimina el margen izquierdo */
+    margin-bottom: 20px;
+  }
+
+  article div ul {
+    width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+    margin: 0; /* Elimina márgenes para ajuste total */
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #Nombre_Propiedades {
+    width: 100%;
+  }
+
+  #Nombre_Propiedades div {
+    width: 90%;
+  }
+
+  #Descripcion_prop {
+    display: none;
+  }
+  .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Por encima del resto del contenido */
+  }
+
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    overflow: auto;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+  }
+}
